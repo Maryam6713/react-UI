@@ -21,34 +21,36 @@ import dish3 from "./dish3.png"
 const FoodSection = () => {
   return (
     <>
-      {/* Navbar Section */}
-      <Navbar expand="lg" bg="white" className="shadow-sm py-3">
-      <Container className="distance">
-        {/* Brand Name */}
-        <Navbar.Brand href="#" className="fw-bold fs-3 text-success">
-          FOODI
-        </Navbar.Brand>
-        
-        {/* Custom Toggle Button */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
-          <FaBars className="fs-2 text-success" />
-        </Navbar.Toggle>
-        
-        <Navbar.Collapse id="basic-navbar-nav" className="text-center">
-          <Nav className="ms-auto gap-3 flex-column flex-lg-row align-items-center w-100 nav">
-            <Nav.Link href="#" className="text-success fw-bold">
-              Home
-            </Nav.Link>
-            <Nav.Link href="#">Menu</Nav.Link>
-            <Nav.Link href="#">Services</Nav.Link>
-            <Nav.Link href="#">Offers</Nav.Link>
-            <Button variant="success" className="mt-3 mt-lg-0 px-4 py-2">
-              Contact
-            </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    {/* Navbar Section */}
+<Navbar expand="lg" bg="white" className="shadow-sm py-3">
+  <Container>
+    {/* Brand Name */}
+    <Navbar.Brand href="#" className="fw-bold fs-3 text-success">
+      FOODI
+    </Navbar.Brand>
+
+    {/* Custom Toggle Button */}
+    <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
+      <FaBars className="fs-2 text-success" />
+    </Navbar.Toggle>
+
+    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+      {/* Navigation Items */}
+      <Nav className="gap-3 align-items-center">
+        <Nav.Link href="#" className="text-success fw-bold">
+          Home
+        </Nav.Link>
+        <Nav.Link href="#">Menu</Nav.Link>
+        <Nav.Link href="#">Services</Nav.Link>
+        <Nav.Link href="#">Offers</Nav.Link>
+        <Button variant="success" className="px-4 py-2">
+          Contact
+        </Button>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+
 
       {/* Hero Section */}
     
@@ -67,7 +69,7 @@ const FoodSection = () => {
         <Button variant="success" className="px-4 py-2">
           Order Now
         </Button>
-        <Button variant="outline-dark" className="px-4 py-2">
+        <Button variant="dark" className="px-4 py-2">
           Watch Video <span className="ms-1">▶️</span>
         </Button>
       </div>
@@ -126,7 +128,7 @@ const FoodSection = () => {
       {/* Product Cards */}
       <div
         className="d-flex flex-wrap justify-content-center gap-3 "
-        style={{ position: "absolute", bottom: "-30%" }}
+        style={{ position: "absolute", bottom: "-20%" }}
       >
         {/* Card 1 */}
         <div
@@ -171,10 +173,6 @@ const FoodSection = () => {
     </Col>
   </Row>
 </Container>
-
-     
-
-      {/* Bottom Food Cards */}
      
 
       {/* Popular Categories */}
@@ -194,7 +192,7 @@ const FoodSection = () => {
                   <Image
                     src={cat.img}
                     roundedCircle
-                    style={{ width: "60px", height: "60px" }}
+                    style={{ width: "70px", height: "70px" , backgroundColor:"skyblue"}}
                     className="categories"
                   />
                 </div>
