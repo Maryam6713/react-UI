@@ -9,7 +9,6 @@ import food2 from "./food2.png";
 import chef from "./chef.png";
 import clientOne from "./client1.png";
 import clientTwo from "./client2.png";
-import clientThree from "./client3.png"
 import cat1 from "./cat1.png"
 import cat2 from "./cat2.png"
 import cat3 from "./cat3.png"
