@@ -51,85 +51,134 @@ const FoodSection = () => {
     </Navbar>
 
       {/* Hero Section */}
-      <Container className="py-5">
-      <Row className="align-items-center">
-        <Col xs={12} lg={6} className="text-center text-lg-start mb-4 mb-lg-0">
-          <h1 className="fw-bold display-4">
-            Dive into Delights Of Delectable{" "}
-            <span style={{ color: "#00d84c" }}>Food</span>
-          </h1>
-          <p className="text-muted">
-            Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship
-          </p>
-          <div className="d-flex justify-content-center justify-content-lg-start gap-3">
-            <Button variant="success" className="px-4 py-2">
-              Order Now
-            </Button>
-            <Button variant="outline-dark" className="px-4 py-2">
-              Watch Video ▶️
-            </Button>
-          </div>
-        </Col>
-        <Col xs={12} lg={6} className="d-flex justify-content-center align-items-center position-relative">
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{
-              width: "300px", // Circle size
-              height: "300px",
-              backgroundColor: "#00d84c",
-              borderRadius: "50%",
-              position: "relative",
-            }}
-          >
-            <Image
-              src={image1}
-              alt="Food Image"
-              style={{
-                width: "450px", // Larger than circle
-                height: "450px", // Larger than circle
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                objectFit: "cover", // Ensures the image covers the area
-              }}
-            />
-          </div>
-        </Col>
-      </Row>
-    </Container>
     
+      <Container className="py-5">
+  <Row className="align-items-center">
+    {/* Text Section */}
+    <Col xs={12} lg={6} className="text-center text-lg-start mb-4 mb-lg-0">
+      <h1 className="fw-bold display-4">
+        Dive into Delights Of Delectable{" "}
+        <span style={{ color: "#00d84c" }}>Food</span>
+      </h1>
+      <p className="text-muted">
+        Where Each Plate Weaves a Story of Culinary Mastery and Passionate Craftsmanship
+      </p>
+      <div className="d-flex justify-content-center justify-content-lg-start gap-3">
+        <Button variant="success" className="px-4 py-2">
+          Order Now
+        </Button>
+        <Button variant="outline-dark" className="px-4 py-2">
+          Watch Video <span className="ms-1">▶️</span>
+        </Button>
+      </div>
+    </Col>
+
+    {/* Image Section */}
+    <Col xs={12} lg={6} className="position-relative d-flex justify-content-center">
+      {/* Green Circle */}
+      <div
+        style={{
+          width: "80%", // Circle width responsive to screen size
+          maxWidth: "400px",
+          aspectRatio: "1/1",
+          backgroundColor: "#00d84c",
+          borderRadius: "50%",
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {/* Central Image */}
+        <Image
+          src={image1} // Replace with the actual image path
+          alt="Food"
+          style={{
+            width: "140%", // Increased size for larger image
+            height: "auto",
+            position: "absolute",
+            top: "50%",
+            left: "25%",
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+      </div>
+
+      {/* Hot Spicy Food Badge */}
+      <div
+        style={{
+          position: "absolute",
+          top: "10%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          backgroundColor: "white",
+          color: "#ff0000",
+          padding: "5px 10px",
+          borderRadius: "20px",
+          fontSize: "14px",
+          fontWeight: "bold",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+      >
+        🌶️ Hot Spicy Food
+      </div>
+
+      {/* Product Cards */}
+      <div
+        className="d-flex flex-wrap justify-content-center gap-3 "
+        style={{ position: "absolute", bottom: "-30%" }}
+      >
+        {/* Card 1 */}
+        <div
+          style={{
+            backgroundColor: "white",
+            borderRadius: "10px",
+            padding: "10px",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+            textAlign: "center",
+            width: "120px",
+          }}
+        >
+          <Image
+            src={food1} // Replace with the actual image path
+            alt="Spicy Noodles"
+            style={{ width: "80px", borderRadius: "50%", height: "70px" }}
+          />
+          <p className="mb-0 fw-bold">Spicy Noodles</p>
+          <p className="mb-0" style={{ color: "#999" }}>$18.00</p>
+        </div>
+
+        {/* Card 2 */}
+        <div
+          style={{
+            backgroundColor: "white",
+            borderRadius: "10px",
+            padding: "10px",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+            textAlign: "center",
+            width: "120px",
+          }}
+        >
+          <Image
+            src={food2} // Replace with the actual image path
+            alt="Vegetarian Salad"
+            style={{ width: "80px", borderRadius: "50%" }}
+          />
+          <p className="mb-0 fw-bold">Vegetarian Salad</p>
+          <p className="mb-0" style={{ color: "#999" }}>$23.00</p>
+        </div>
+      </div>
+    </Col>
+  </Row>
+</Container>
+
+     
 
       {/* Bottom Food Cards */}
-      <Container className="mt-5 d-flex justify-content-center">
-        <Row className="gap-5 justify-content-center">
-          <Col xs={12} sm={6} md={4} lg={3} className="text-center border-2 p-3 rounded shadow-sm shade-two">
-            <Image
-              src={food1}
-              roundedCircle
-              className="mb-3"
-              style={{ width: "50%", height: "auto" }}
-            />
-            <h5 className="fw-bold">Spicy Noodles</h5>
-            <p className="text-warning mb-1">★ ★ ☆ ☆ ☆</p>
-            <p className="fw-bold">$18.00</p>
-          </Col>
-          <Col xs={12} sm={6} md={4} lg={3} className="text-center border-2 p-3 rounded shadow-sm shade-two">
-            <Image
-              src={food2}
-              roundedCircle
-              className="mb-3"
-              style={{ width: "50%", height: "auto" }}
-            />
-            <h5 className="fw-bold">Vegetarian Salad</h5>
-            <p className="text-warning mb-1">★ ★ ★ ★ ☆</p>
-            <p className="fw-bold">$23.00</p>
-          </Col>
-        </Row>
-      </Container>
+     
 
       {/* Popular Categories */}
-      <Container className="text-center my-5 mt-5">
+      <Container className="main text-center my-5 mt-5" style={{top:"30px"}}>
         <h5 className="text-danger fw-bold">CUSTOMER FAVORITES</h5>
         <h2 className="fw-bold mb-4">Popular Categories</h2>
         <Row className="justify-content-center gap-0">
